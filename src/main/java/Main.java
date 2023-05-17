@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
@@ -13,7 +15,7 @@ public class Main {
         mutzi.setType("cat");
 
         // alt: Pet[] myPets = new Pet[2];
-        List<Pet> myPets = new ArrayList<>();
+        Set<Pet> myPets = new HashSet<>();
         // myPets[0] = wuffi;
         myPets.add(wuffi);
         //myPets[1] = mutzi;
