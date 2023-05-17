@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -15,20 +12,22 @@ public class Main {
         mutzi.setType("cat");
 
         // alt: Pet[] myPets = new Pet[2];
-        Set<Pet> myPets = new HashSet<>();
+        Map<String, Pet> myPets = new HashMap<>();
         // myPets[0] = wuffi;
-        myPets.add(wuffi);
+        myPets.put(wuffi.getName(), wuffi);
         //myPets[1] = mutzi;
-        myPets.add(mutzi);
+        myPets.put(mutzi.getName(), mutzi);
 
         Pet tweety = new Pet();
         tweety.setName("Tweety");
         tweety.setType("bird");
         //myPets[2] = tweety;
-        myPets.add(tweety);
+        myPets.put(tweety.getName(), tweety);
 
-        for (Pet anyPet : myPets) {
+        for (Pet anyPet : myPets.values()) {
             System.out.println("Ich füttere " + anyPet);
         }
+
+        System.out.println("Mein Lieblingstier ist " + myPets.get("Wuffi"));
     }
 }
