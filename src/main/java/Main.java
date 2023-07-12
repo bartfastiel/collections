@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,14 +12,14 @@ public class Main {
         mutzi.setName("Mutzi");
         mutzi.setType("cat");
 
-        Pet[] myPets = new Pet[2];
-        myPets[0] = wuffi;
-        myPets[1] = mutzi;
+        List<Pet> myPets = new ArrayList<>();
+        myPets.add(wuffi);
+        myPets.add(mutzi);
 
         Pet tweety = new Pet();
         tweety.setName("Tweety");
         tweety.setType("bird");
-        myPets[2] = tweety;
+        myPets.add(tweety);
 
         for (Pet anyPet : myPets) {
             System.out.println("Ich füttere " + anyPet);
